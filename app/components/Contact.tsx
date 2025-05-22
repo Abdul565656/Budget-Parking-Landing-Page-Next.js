@@ -1,12 +1,10 @@
-// components/ContactSection.tsx
 import React from "react";
 import { FaGlobe, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
 
-const ContactSection = () => {
+const Contact = () => {
   return (
     <section className="relative bg-white">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/images/bg contact.jpg"
@@ -17,12 +15,9 @@ const ContactSection = () => {
         />
       </div>
 
-      {/* Overlay to darken the image slightly */}
       <div className="absolute inset-0 bg-white/60" />
 
-      {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 md:px-10 grid md:grid-cols-2 gap-10">
-        {/* Left Side */}
         <div className="text-gray-800">
           <h2 className="text-3xl font-bold mb-2">Need Assistance?</h2>
           <p className="mb-8 text-sm">
@@ -74,7 +69,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-        {/* Right Side - Contact Form */}
         <div className="bg-white shadow-lg rounded-xl p-8">
           <h3 className="text-xl font-semibold mb-6">Send A Message</h3>
           <form className="space-y-4">
@@ -111,4 +105,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default Contact;

@@ -1,11 +1,10 @@
-// Navbar.tsx
 "use client";
 
 import React from 'react';
 import { FaUser } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
-import MobileNav from './MobileNav'; // Make sure the path is correct
+import MobileNav from './MobileNav'; 
 
 const Navbar = () => {
   const navItems = [
@@ -34,7 +33,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Navigation Links */}
         <ul className="hidden sm:flex items-center space-x-8">
           {navItems.map((item) => (
             <li key={item.name}>
@@ -57,12 +55,12 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Mobile Navigation Trigger - Shown only on small screens */}
-        <div className="sm:hidden"> {/* This div ensures MobileNav trigger is only on small screens */}
+       
+        <div className="sm:hidden"> 
           <MobileNav
             logoSrc={logoSrc}
             logoAlt={logoAlt}
-            navLinks={navItems} // Props are passed here!
+            navLinks={navItems} 
           />
         </div>
       </nav>

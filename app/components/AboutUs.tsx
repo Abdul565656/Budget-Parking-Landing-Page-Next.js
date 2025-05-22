@@ -1,38 +1,41 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const AboutUsSection: React.FC = () => {
-  const primaryGreen = '#8CC63F'; // Your brand green
+const AboutUs = () => {
+  const primaryGreen = '#8CC63F'; 
 
   return (
-    // REMOVED bg-white from here. Padding is kept.
     <div className="py-12 md:py-20 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-          {/* Left Column: Image */}
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-full rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/images/about.jpg" // Ensure path is correct
+              src="/images/about.jpg" 
               alt="Our team working in the office"
               fill
               className="object-cover rounded-2xl"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Adjust sizes as needed
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
               priority
             />
           </div>
 
-          {/* Right Column: Text Content */}
+
+
+
           <div className="relative py-4">
-            {/* Internal decorative background element - this can be kept, adjusted, or removed */}
+         
+
+
             <div
               aria-hidden="true"
               className="absolute inset-x-0 bottom-[-50px] h-[250px] opacity-[0.10] -z-10" // Slightly adjusted opacity
               style={{
                 backgroundColor: primaryGreen,
                 borderRadius: '50% / 30%',
-                filter: 'blur(60px)', // Increased blur slightly
-              }}
-            ></div>
+                filter: 'blur(60px)', 
+              }}>
+            </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">
               About Us
@@ -63,13 +66,12 @@ const AboutUsSection: React.FC = () => {
               </div>
             </div>
             <div className="mt-8 md:mt-10">
-              <a
+              <Link
                 href="/parking-options"
                 className="inline-block text-white font-medium py-3 px-8 rounded-lg shadow-md hover:opacity-90 transition-opacity text-sm sm:text-base"
-                style={{ backgroundColor: primaryGreen }}
-              >
+                style={{ backgroundColor: primaryGreen }}>
                 Our Parking Options
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -78,4 +80,4 @@ const AboutUsSection: React.FC = () => {
   );
 };
 
-export default AboutUsSection;
+export default AboutUs;

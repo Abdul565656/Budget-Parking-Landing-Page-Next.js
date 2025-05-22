@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import React from "react";
 import Image from "next/image";
 import {
@@ -12,7 +11,6 @@ import { FaPlane } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-[#173819] text-white text-sm pt-10">
-      {/* Newsletter */}
       <div className="max-w-7xl mx-auto px-4 md:px-10 pb-8 border-b border-green-700">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
@@ -71,7 +69,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Important Reading */}
         <div>
           <h3 className="font-semibold mb-4">Important Reading</h3>
           <ul className="space-y-2 text-gray-300">
@@ -89,7 +86,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Services */}
+
         <div>
           <h3 className="font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-gray-300">
@@ -110,40 +107,23 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+           {/* bottom footer */}
       <div className="border-t border-green-700 mt-4">
       <div className="max-w-7xl mx-auto px-4 md:px-10 py-3 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-200 text-xs">
-    {/*
-      - Changed py-6 to py-3 for a slimmer bar, closer to the image.
-      - Changed text-gray-300 to text-gray-200 for slightly brighter text if needed,
-        but text-gray-300 is also fine.
-    */}
     <p className="text-center md:text-left">
-      {/*
-        - Removed 'flex justify-center' as positioning is handled by the parent.
-        - Added 'text-center md:text-left' for better text alignment:
-          centered on small (stacked) screens, left-aligned on medium+ (row) screens.
-      */}
       Working Hours : Mon - Sun 24h
     </p>
     <Image
       src="/images/credit img.png"
       alt="Accepted payment methods"
-      width={160} /* Adjusted width for a typical payment icon sprite (e.g., 4 icons, each ~40px wide) */
-      height={24}  /* Adjusted height to make icons smaller, e.g., 24px tall */
+      width={160} 
+      height={24}  
     />
-    {/*
-      - Changed width and height to more realistic values for small payment icons.
-        The original 100x100 would be very large.
-        These values (160x24) assume your 'credit img.png' is a horizontal sprite
-        of multiple payment logos. Adjust as needed based on your actual image.
-      - Improved alt text for accessibility.
-    */}
   </div>
   </div>
 
 
-        {/* Bottom Bar */}
+        {/* bottom footer */}
         <div className="border-t border-green-700 mt-4">
         <div className="max-w-7xl mx-auto px-4 md:px-10 py-6 flex flex-col md:flex-row justify-between items-center gap-2 text-gray-300 text-xs">
           <p>© 2024 Copyright Heathrow Budget Parking. All Right Reserved</p>

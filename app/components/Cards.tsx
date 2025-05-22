@@ -4,27 +4,25 @@ import Image from 'next/image';
 interface Airport {
   id: string;
   name: string;
-  imageUrl: string; // Ensure these paths are correct in your project
+  ImageUrl: string; 
 }
 
-// NOTE: Replace these imageUrl paths with your actual image locations.
-// Example: '/images/airports/birmingham.jpg'
 const airportsData: Airport[] = [
-  { id: 'birmingham', name: 'Birmingham Airport', imageUrl: '/images/airport 1.jpg' },
-  { id: 'bristol', name: 'Bristol Airport', imageUrl: '/images/airport 2.jpg' },
-  { id: 'east-midlands', name: 'East Midlands Airports', imageUrl: '/images/airport 3.jpg' },
-  { id: 'edinburgh', name: 'Edinburgh Airport', imageUrl: '/images/airport 4.jpg' },
-  { id: 'gatwick', name: 'Gatwick Airport', imageUrl: '/images/airport 5.jpg' },
-  { id: 'glasgow', name: 'Glasgow Airport', imageUrl: '/images/airport 6.jpg' },
-  { id: 'heathrow', name: 'Heathrow Airport', imageUrl: '/images/airport 7.jpg' },
-  { id: 'liverpool', name: 'Liverpool Airport', imageUrl: '/images/airport 8.jpg' },
-  { id: 'luton', name: 'Luton Airport', imageUrl: '/images/airport 9.jpg' },
-  { id: 'manchester', name: 'Manchester Airport', imageUrl: '/images/airport 10.jpg' },
-  { id: 'southend', name: 'Southend Airport', imageUrl: '/images/airport 11.jpg' },
-  { id: 'stansted', name: 'Stansted Airport', imageUrl: '/images/airport 12.jpg' }, // Corrected spelling
+  { id: 'birmingham', name: 'Birmingham Airport', ImageUrl: '/images/airport 1.jpg' },
+  { id: 'bristol', name: 'Bristol Airport', ImageUrl: '/images/airport 2.jpg' },
+  { id: 'east-midlands', name: 'East Midlands Airports', ImageUrl: '/images/airport 3.jpg' },
+  { id: 'edinburgh', name: 'Edinburgh Airport', ImageUrl: '/images/airport 4.jpg' },
+  { id: 'gatwick', name: 'Gatwick Airport', ImageUrl: '/images/airport 5.jpg' },
+  { id: 'glasgow', name: 'Glasgow Airport', ImageUrl: '/images/airport 6.jpg' },
+  { id: 'heathrow', name: 'Heathrow Airport', ImageUrl: '/images/airport 7.jpg' },
+  { id: 'liverpool', name: 'Liverpool Airport', ImageUrl: '/images/airport 8.jpg' },
+  { id: 'luton', name: 'Luton Airport', ImageUrl: '/images/airport 9.jpg' },
+  { id: 'manchester', name: 'Manchester Airport', ImageUrl: '/images/airport 10.jpg' },
+  { id: 'southend', name: 'Southend Airport', ImageUrl: '/images/airport 11.jpg' },
+  { id: 'stansted', name: 'Stansted Airport', ImageUrl: '/images/airport 12.jpg' },
 ];
 
-const AirportFinderSection: React.FC = () => {
+const Card = () => {
   return (
     <section className="bg-[#F8F9F8] py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,16 +41,15 @@ const AirportFinderSection: React.FC = () => {
               key={airport.id}
               className="bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 ease-in-out hover:shadow-lg"
             >
-              <div className="relative w-full h-40"> {/* Fixed height for the image container */}
+              <div className="relative w-full h-40"> 
                 <Image
-                  src={airport.imageUrl}
+                  src={airport.ImageUrl}
                   alt={`Photo of ${airport.name}`}
                   layout="fill"
                   objectFit="cover"
-                  // The card's `overflow-hidden` and `rounded-xl` will clip the image's top corners
                 />
               </div>
-              <div className="py-5 px-4"> {/* Adjusted padding for text area */}
+              <div className="py-5 px-4"> 
                 <h3 className="text-md font-semibold text-gray-800 text-center">
                   {airport.name}
                 </h3>
@@ -65,4 +62,4 @@ const AirportFinderSection: React.FC = () => {
   );
 };
 
-export default AirportFinderSection;
+export default Card;

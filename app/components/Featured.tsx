@@ -1,4 +1,3 @@
-// components/FeaturesSection.tsx
 import React from 'react';
 import { IconType } from 'react-icons';
 import { BsPatchCheckFill } from 'react-icons/bs';
@@ -50,7 +49,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
 
 const FeaturesSection: React.FC = () => {
   return (
-    // REMOVED bg-gray-50 from here. Padding is kept for spacing.
     <div className="py-10 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
